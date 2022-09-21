@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            width:100%;
+            display: grid;
+            place-items: center;
+         
+        }
+        .phone {
+            position:relative;
+            border: 8px solid black;
+            border-radius: 40px;
+            height: 600px;
+            width: 300px;
+            background: #CCEFFF; 
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30),
+            0 19px 38px rgba(0, 0, 0, 0.22);
+        }              
+      .layer-1 {
+        position: absolute;
+        z-index: 1;
+        height: 450px;
+        width: 80px;
+        bottom: 0;
+        right: 60px;
+
+        animation-name: layer;
+        animation-duration:1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+       @keyframes layer {
+        0%{
+         bottom:0;
+        }
+        25%{
+          bottom:-80px;
+
+        }
+        100%{
+           bottom:0;
+     
+        }
+       }
+
+ 
+      .layer-2 {
+        position: absolute;
+        z-index: 2;
+        height: 450px;
+        width: 80px;
+        bottom: 0;
+        left: 60px;
+
+        animation-name: layer;
+        animation-duration:2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+      .layer-3 {
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 220px;
+        height: 400px;
+        background: wheat;
+        bottom: 0; 
+        opacity: 1.5;
+        border: green;
+        border-radius: 5%;
+        background-image:  linear-gradient(135deg, green  25%, transparent 25%) ,
+                   linear-gradient(225deg, green 25%, transparent 25%)  , 
+                   linear-gradient(45deg, green 25%, transparent 25%)  , 
+                   linear-gradient(315deg, green 25%, brown 25%) ;
+        background-position:  10px 0, 10px 0, 0 0, 0 0;
+        background-size: 40px 40px;
+        background-repeat:repeat;
+
+    
+   
+
+
+      }
+      .layer-4 {
+        position: absolute;
+        z-index: 4;
+        height: 350px;
+        width: 80px;
+      
+        bottom: 0;
+        left: 15px;
+
+        animation-name: layer;
+        animation-duration:2.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+
+      }
+      .layer-5 {
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        right: 5;
+        margin: 0 auto;
+        width: 200px;
+        height: 300px;
+        bottom: 0;
+        opacity: 1;
+        border: green;
+        border-radius: 5%;
+        background-image:  linear-gradient(135deg, green  25%, transparent 25%) ,
+                   linear-gradient(225deg, green 25%, transparent 25%)  , 
+                   linear-gradient(45deg, green 25%, transparent 25%)  , 
+                   linear-gradient(315deg, green 25%, brown 25%) ;
+        background-position:  10px 0, 10px 0, 0 0, 0 0;
+        background-size: 40px 40px;
+        background-repeat:repeat;
+
+      }
+      .layer-6 {
+        position: absolute;
+        z-index: 6;
+        height: 250px;
+        width: 80px;
+  
+        bottom: 0;
+        right: 25px;
+
+        animation-name: layer;
+        animation-duration:3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        
+      }
+      .layer-7 {
+        position: absolute;
+        z-index: 7;
+        left: 160px;
+        right: 0px;
+        margin: 0 auto;
+        width: 140px;
+        height: 200px;
+        bottom: 0;
+        border: green;
+        border-radius: 5%;
+        background-image:  linear-gradient(135deg, green  25%, transparent 25%) ,
+                   linear-gradient(225deg, green 25%, transparent 25%)  , 
+                   linear-gradient(45deg, green 25%, transparent 25%)  , 
+                   linear-gradient(315deg, green 25%, brown 25%) ;
+        background-position:  10px 0, 10px 0, 0 0, 0 0;
+        background-size: 40px 40px;
+        background-repeat:repeat;     
+      }
+      .layer-8 {
+        position: absolute;
+        z-index: 8;
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        background: green;
+        border: solid black;
+        border-radius: 15%;
+        bottom: 0;
+      }
+      .layer-9 {
+        position: absolute;
+        z-index: 9;
+        left: 200px;
+        right: 0px;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        background: white;
+        border: solid black;
+        border-radius: 15%;
+        bottom: 0;
+      }
+      .layer-10 {
+        position: absolute;
+        z-index: 10;
+        height: 100px;
+        width: 100px;
+        background: white;
+        border: solid black;
+        border-radius: 15%;
+        bottom: -5px;
+        left: -205px;
+       
+      }
+
+      
+
+       .left-ear--outer{
+        background: white;
+        border-radius: 90%;
+        width: 20px;
+        height: 50px;
+        position: absolute;
+        left: 10px;
+      } 
+      .left-ear--inner{
+        background: pink;
+        border-radius: 90%;
+        width: 10px;
+        height: 50px;
+        position: absolute;
+        left: 15px;
+        top: 8px;
+      } 
+
+      .right-ear--outer{
+        background: white;
+        border-radius: 90%;
+        width: 20px;
+        height: 50px;
+        position: absolute;
+        right: 10px;
+      } 
+      .right-ear--inner{
+        background: pink;
+        border-radius: 90%;
+        width: 10px;
+        height: 50px;
+        position: absolute;
+        right: 15px;
+        top: 8px;
+      } 
+      .head {
+        background: white;
+        border-radius: 50%;
+        height: 80px;
+        left:0;
+        right: 0;
+        margin: 0 auto;
+        position: absolute;
+        top: 30px;
+        width: 100%;
+
+      }
+      .head__eye {
+        background: gray;
+        border-radius:50%;
+        width: 4px;
+        height: 4px;
+        position: absolute; 
+        top: 15px;
+        animation-name: blink;
+        animation-duration: 2s;
+        animation-iteration-count:infinite;
+
+      }
+      @keyframes blink{
+        0%{
+           height: 4px;
+        }
+        5%{
+          transform: translate(0px,2px);
+          height: 1px;
+
+        }
+        10%{
+          transform: translate(0px, 0px);
+          height: 4px;
+
+        }
+      }
+
+      .head__eye--left {
+         left: 25px;
+    }
+      .head__eye--right {
+         right: 25px;  
+    }
+ 
+    
+     #cloud {
+                width: 350px; height: 120px;
+                background: #BFF;
+                background: linear-gradient(top, #BFF 5%, #DFF 100%);
+                background: -webkit-linear-gradient(top, #FFF 1%, #BFF 100%);
+                background: -moz-linear-gradient(top, #BFF 5%, #DFF 100%);
+                background: -ms-linear-gradient(top, #BFF 5%, #DFF 100%);
+                background: -o-linear-gradient(top, #BFF 5%, #DFF 100%);
+                top: -10px; left: 25px;
+                border-radius: 100px;
+                position: absolute;
+                margin: 0px auto 20px;
+                left:-20px;
+                
+            }
+
+            #cloud:after, #cloud:before {
+                content: '';
+                position: absolute;
+                background: #FFF;
+                z-index: -1
+            }
+
+            #cloud:after {
+                width: 100px; height: 100px;
+                top: -50px; left: 50px;
+                border-radius: 100px;
+            }
+
+            #cloud:before {
+                width: 200px; height: 200px;
+                top: -90px; right: 50px;
+                border-radius: 200px;
+            }
+
+            .shadow {
+                width: 350px;
+                position: absolute; bottom: -10px; 
+                background: #000;
+                z-index: -1;
+                box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+                border-radius: 50%;
+            }
+    </style>
+</head>
+<body>
+    <div class="phone">
+        <!--BUNNY 1-->
+        <div class="layer-1">
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <div class="head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+        </div>
+        </div>
+        <div class="layer-2">
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <div class="head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+        </div>
+        </div>
+        <div class="layer-3"></div>
+        <div class="layer-4">
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <div class="head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+        </div>
+        </div>
+        <div class="layer-5"></div>
+        <div class="layer-6">
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <div class="head">
+                <div class="head__eye head__eye--left"></div>
+                <div class="head__eye head__eye--right"></div>
+        </div>
+        </div>
+        <div class="layer-7"></div>
+        <div class="layer-8">
+        
+        </div>
+       
+       
+        <div class="layer-9">
+        <div class="layer-10">
+           <div id="cloud">
+            <span class='shadow'></span>
+           </div>
+          
+        </div> 
+      </div>
+    </div>    
+</body>
+</html>
